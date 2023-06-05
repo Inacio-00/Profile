@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, input, textarea {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+body::before {
+    content: '';
+    width: 100%;
+    height: 368px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+    background: #121214
+    
+}
+
+.page {
+    width: 736px;
+    margin: auto;
+}
+
+header {
+    width:319px;
+
+    margin-top: 74px;
+}
+
+header h1 {
+
+   font-family: 'Archivo', sans-serif;
+   font-weight: bold;
+   font-size: 36px;
+   line-height: 42px;
+   color: white;
+   
+   margin-bottom: 24px;
+}
+
+header p {
+   font-size: 16px;
+   line-height: 26px;
+
+   color: #42D3FF;
+}
+
+form {
+    background-color: #FAFAFC;
+
+    min-height: 300px;
+    margin-top: 38px;
+    border-radius: 8px 8px 0 0;
+    padding: 65px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+}
+
+fieldset {
+    border: none;
+}
+
+.fieldset-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+fieldset legend {
+    font-family: 'Archivo' 'sans serife';
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    
+    border-bottom: 1px solid #E6E6F0;
+    width: 100%;
+
+    padding-bottom: 16px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label {
+    font-size: 14px;
+    line-height: 24px;
+
+    color: #4E4958;
+
+    margin-bottom: 8px;
+}
+
+.input-wrapper label span {
+    margin-left: 12px;
+
+    font-size: 12px;
+    line-height: 20px;
+
+    color: #9a94a7;
+}
+
+.input-wrapper label span:hover {
+    color: #151416;
+}
+
+.input-wrapper input, .input-wrapper textarea 
+,.input-wrapper select {
+    background-color: #FAFAFC;
+
+    border: 1px solid #e6e6f0;
+    border-radius: 8px;
+
+    height: 56px;
+    
+    padding: 0 24px;
+
+    font-size: 16px;
+    line-height: 26px;
+
+    color: #5c5964;
+}
+
+.input-wrapper textarea {
+    padding: 0 1;
+    height: 168px;
+}
+
+.input-wrapper select {
+    appearance: none;
+    background: #FAFAFC url("imagens/seta\ 1.png") 95.5% 50% no-repeat;
+}
+
+.diahora {
+    display: flex;
+    gap: 20px;
+}
+
+.diahora > div:nth-child(1) {
+    width: 100%;
+}
+
+.checkbox-wrapper {
+    position: relative;
+}
+
+.checkbox-wrapper label {
+    font-size: 14px;
+    line-height: 24px;
+    
+    display: flex;
+    gap: 16px;
+    color: #4E4958;
+
+}
+
+.checkbox-wrapper input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+
+    opacity: 0;
+}
+
+.checkbox-wrapper label::before {
+    content: '';
+    display: block;
+
+    width: 24px;
+    height: 24px;
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+     background-color: #42D3FF;
+}
+
+.checkbox-wrapper input:focus + label::before{
+    outline: 2px solid black; 
+}
+
+
+footer {
+    background-color: #F0F0F4;
+
+    height: 136px;
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px 64px;
+    margin-bottom: 100px;
+
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #D6D6D6;
+}
+
+footer .button {
+    height: 56px;
+    background: #04D361;
+    border-radius: 8px;
+    border: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+footer .button:hover {
+    background: #0e8d47;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
